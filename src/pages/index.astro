@@ -11,6 +11,9 @@ import Section from '@/components/home/Section.astro'
 import SkillLayout from '@/components/home/SkillLayout.astro'
 import avatar from '@/assets/avatar.jpeg'
 import config from '@/site-config'
+import enjmin from '@/assets/enjmin-mascotte.png'
+import threeil from '@/assets/3il-logo.png'
+import prepavogt from '@/assets/prepavogt-logo.png'
 
 const languages = ['C++', 'C#', 'HLSL', 'GLSL', 'Java', 'Python']
 const tools = ['Unreal Engine', 'RenderDoc', 'Unity']
@@ -134,7 +137,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
           </ul> */
         }
-          <img class="absolute end-0 z-0 m-0 -my-3 h-full w-1/2 object-cover opacity-20"  src='/src/assets/enjmin-mascotte.png' />
+          <Image
+            src={enjmin}
+            alt='enjmin'
+            class='absolute end-0 z-0 m-0 -my-3 h-full w-1/2 object-cover opacity-20'
+            loading='eager'
+          />
         </Card>
         <Card
         as='a'
@@ -152,7 +160,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
           </ul> */
         }
-          <img class="absolute end-0 z-0 m-0 -my-3 h-full w-1/2 object-cover opacity-20"  src='/src/assets/3il-logo.png' />
+          <Image
+            src={threeil}
+            alt='3iL'
+            class='absolute end-0 z-0 m-0 -my-3 h-full w-1/2 object-cover opacity-20'
+            loading='eager'
+          />
         </Card>
         <Card
         as='a'
@@ -170,7 +183,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
           </ul> */
         }
-          <img class="absolute end-0 z-0 m-0 -my-3 h-full w-1/2 object-cover opacity-20"  src='/src/assets/prepavogt-logo.png' />
+          <Image
+            src={prepavogt}
+            alt='prepavogt'
+            class='absolute end-0 z-0 m-0 -my-3 h-full w-1/2 object-cover opacity-20'
+            loading='eager'
+          />
         </Card>
       </Section>
       
