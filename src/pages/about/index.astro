@@ -1,0 +1,171 @@
+---
+import { Comment } from 'astro-pure/advanced'
+import { Button, Collapse, Spoiler, Timeline } from 'astro-pure/user'
+import PageLayout from '@/layouts/CommonPage.astro'
+import Substats from '@/components/about/Substats.astro'
+import ToolSection from '@/components/about/ToolSection.astro'
+
+const headings = [
+  { depth: 2, slug: 'hobbies', text: 'Hobbies' },
+  { depth: 2, slug: 'tools', text: 'Tools' },
+  { depth: 2, slug: 'social-networks', text: 'Social Networks' },
+  { depth: 2, slug: 'gossips', text: 'Gossips' },
+  { depth: 2, slug: 'about-blog', text: 'About Blog' }
+]
+---
+
+<PageLayout title='About' {headings} info='/about'>
+  <p>3D Developer / C++ Developer</p>
+  <p>
+    Student in computer science and multimedia. I enjoy solving technical challenges 
+    with style and respect for real time technical constraints. 
+    I'm skilled in low-level programming, real-time applications and 3D programming.
+  </p>
+  <p>My motto: Stay hungry, Stay foolish. <Spoiler>You can bring your own stuff here.</Spoiler></p>
+  <Button title='Reach Me' class='w-fit' href='https://www.linkedin.com/in/wilfried-fn/' style='ahead' />
+
+  {/* general-talk */}
+  <h2 id='hobbies'>Hobbies</h2>
+  <ul>
+    <li>Creation of immersive visual performances combining 3D mapping, <b>VJing</b> and live interaction with DJ artists.</li>
+    <li>
+      Video games : Passionate about immersive worlds, strategic gameplay and strong storytelling in video games.
+    </li>
+    <li>Sport : Regular practice of team and individual sports: Volleyball, Basketball.</li>
+  </ul>
+
+  {/* tools */}
+  <h2 id='tools'>Tools</h2>
+  <p>Current support tools as follow:</p>
+  <ToolSection
+    class='mb-5'
+    title='3D tools'
+    tools={[
+      {
+        name: 'Unreal Engine',
+        description: '3D Programming',
+        href: 'https://www.unrealengine.com',
+        icon: import('@/assets/tools/unrealengine.svg?raw')
+      },
+      {
+        name: 'Unity',
+        description: '3D Programming',
+        href: 'https://unity.com/',
+        icon: import('@/assets/tools/unity.svg?raw')
+      },
+      {
+        name: 'Renderdoc',
+        description: 'Profiling',
+        href: 'https://renderdoc.org/',
+        icon: import('@/assets/tools/renderdoc.svg?raw')
+      },
+      {
+        name: 'Blender',
+        description: 'Tech art',
+        href: 'https://renderdoc.org/',
+        icon: import('@/assets/tools/blender.svg?raw')
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Programming languages / APIs'
+    tools={[
+      {
+        name: 'C++',
+        description: '',
+        href: '/',
+        icon: import('@/assets/tools/cpp.svg?raw')
+      },
+      {
+        name: 'Java',
+        description: '',
+        href: '/',
+        icon: import('@/assets/tools/java.svg?raw')
+      },
+      {
+        name: 'Python',
+        description: '',
+        href: '/',
+        icon: import('@/assets/tools/python.svg?raw')
+      },
+      {
+        name: 'OpenGL',
+        description: '',
+        href: 'https://typora.io/',
+        icon: import('@/assets/tools/opengl.svg?raw')
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Development'
+    tools={[
+      {
+        name: 'VS Code',
+        description: 'IDE',
+        href: 'https://code.visualstudio.com/',
+        icon: import('@/assets/tools/vscode.svg?raw')
+      },
+      {
+        name: 'Visual Studio',
+        description: 'IDE',
+        href: 'https://visualstudio.microsoft.com/',
+        icon: import('@/assets/tools/visualstudio.svg?raw')
+      },
+      {
+        name: 'Rider',
+        description: 'IDE',
+        href: 'https://www.jetbrains.com/rider/',
+        icon: import('@/assets/tools/rider.svg?raw')
+      },
+      {
+        name: 'CLion',
+        description: 'IDE',
+        href: 'https://www.jetbrains.com/clion/',
+        icon: import('@/assets/tools/clion.svg?raw')
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Environment'
+    tools={[
+      {
+        name: 'Arch Linux',
+        description: '',
+        href: 'https://archlinux.org/',
+        icon: import('@/assets/tools/archlinux.svg?raw')
+      },
+      {
+        name: 'Ubuntu 24.04 LTS',
+        description: '',
+        href: 'https://ubuntu.com/',
+        icon: import('@/assets/tools/ubuntu.svg?raw')
+      },
+      {
+        name: 'Windows 11',
+        description: '',
+        href: 'https://news.microsoft.com/windows11-general-availability/',
+        icon: import('@/assets/tools/windows11.svg?raw')
+      }
+    ]}
+  />
+
+  {/* social-networks */}
+  <h2 id='social-networks'>Social Networks</h2>
+  <p>
+    Follow me so you can keep up with my work.
+  </p>
+  <Substats
+    stats={[
+      {
+        platform: 'GitHub',
+        icon: 'github',
+        link: 'https://github.com/willndefo',
+        text: 'followers',
+        api: 'github/willndefo'
+      }
+    ]}
+  />
+</PageLayout>
