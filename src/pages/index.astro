@@ -15,8 +15,8 @@ import enjmin from '@/assets/enjmin-mascotte.png'
 import threeil from '@/assets/3il-logo.png'
 import prepavogt from '@/assets/prepavogt-logo.png'
 
-const languages = ['C++', 'C#', 'HLSL', 'GLSL', 'Java', 'Python']
-const tools = ['Unreal Engine', 'RenderDoc', 'Unity']
+const languages = ['C', 'C++', 'Assembly (x86, ARM)',  'C#', 'HLSL', 'GLSL', 'Java', 'Python', 'JavaScript']
+const tools = ['Unreal Engine', 'RenderDoc', 'Unity', 'Visual Studio']
 const graphicsAPI = ['OpenGL', 'DirectX']
 
 const MAX_POSTS = 10
@@ -43,7 +43,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           <Label
             title='Github'
             as='a'
-            href='https://github.com/willndefo'
+            href='https://github.com/fotsondefo'
             target='_blank'
           >
             <Icon name='github' class='size-5' slot='icon' />
@@ -69,11 +69,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
     <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
       <Section title='About'>
-        <p class='text-muted-foreground'>3D Developer</p>
+        <p class='text-muted-foreground'>Software engineer / Developer, as you want.</p>
         <p class='text-muted-foreground'>
-          Student in computer science and multimedia. I enjoy solving technical challenges 
-          with style and respect for real time technical constraints. 
-          I'm skilled in low-level programming, real-time applications and 3D programming.
+          I'm skilled in low-level programming, real-time applications, 3D programming and a little bit in embedded softwares.
+          I write articles about math, simulation, optimization, graphics and programming.
         </p>
         <Button title='More about me' class='w-fit self-end' href='/about' style='ahead' />
       </Section>
@@ -102,13 +101,14 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         altText='Lorem, ipsum dolor sit'
         imageClass='h-12 w-auto md:-start-16'
       >
-        <ul class='ms-4 list-disc text-muted-foreground'>
-          <li>Optimzation and performance analysis</li>
-          <li>VR & Scientific Visualization on Unreal Engine</li>
-          <li>Socket programming (TCP/UDP) both C++ and Python</li>
-          <li>Implementation of advanced rendering algorithms</li>
-          <li>Designed shared libraries (DLL) in C++</li>
-        </ul>
+        <span class='text-muted-foreground'>
+        In the research project to design immersive digital twins for education, 
+        I participated in 2 sub-projects in fields such as : 
+        structural mechanics and CFD (aerodynamics).
+        My main goals was to optimize both CPU and GPU parts of the visualization engine, 
+        design/develop the network interface of the application, implement rendering algorithms 
+        and I took part of some architectural design choices.  
+        </span>
       </Card>
       {/* <Card
         heading='Lorem Ipsum'
